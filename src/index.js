@@ -16,12 +16,20 @@ lorien.get("/lorien.js", (req, res) => {
   res.sendFile(path.join(__dirname, "./lorien.js"))
 })
 
+lorien.get("/lorien.json", (req, res) => {
+  res.sendFile(path.join(__dirname, "./lorien.json"))
+})
+
 mordor.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "./mordor.html"))
 })
 
 mordor.get("/mordor.js", (req, res) => {
   res.sendFile(path.join(__dirname, "./mordor.js"))
+})
+
+mordor.get("/mordor.json", (req, res) => {
+  res.sendFile(path.join(__dirname, "./mordor.json"))
 })
 
 lorien.listen(lorienPort, () => {
